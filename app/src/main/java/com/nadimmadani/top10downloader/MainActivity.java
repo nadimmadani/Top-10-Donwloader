@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
             parseButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listView.setContentDescription(mFileContents);
+                    ParseApplications parseApplications = new ParseApplications(mFileContents);
+                    parseApplications.process();
                 }
             });
         }
